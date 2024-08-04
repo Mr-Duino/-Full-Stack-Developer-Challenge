@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="module" src="firebaseauth.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Boostrap Login | Ludiflex</title>
+</head>
+
+<body>
+
+    <!----------------------- Main Container -------------------------->
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+        <!----------------------- Login Container -------------------------->
+
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+
+            <!--------------------------- Left Box ----------------------------->
+
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+                style="background: #080808;">
+                <div class="featured-image mb-3">
+                    <img src="images/front.jpg" class="img-fluid" style="width: 250px;">
+                </div>
+                <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Be
+                    Verified</p>
+                <small class="text-white text-wrap text-center"
+                    style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Join experienced Designers on
+                    this platform.</small>
+            </div>
+
+            <!-------------------- ------ Right Box ---------------------------->
+            <div class="col-md-6 right-box">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                        <h2>Create Busness Card</h2>
+
+                    </div>
+
+                    <form id="businessCardForm">
+
+                        <div class="input-group mb-3">
+                            <input type="text" id="name" class="form-control form-control-lg bg-light fs-6"
+                                placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" id="role" class="form-control form-control-lg bg-light fs-6"
+                                placeholder="Your Role" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" id="company" class="form-control form-control-lg bg-light fs-6"
+                                placeholder="Company Name" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Create
+                                Card</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
