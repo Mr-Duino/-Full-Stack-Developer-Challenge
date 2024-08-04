@@ -1,60 +1,46 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato);
 
 body {
-
-
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 90vh;
     color: #000;
+    background-color: #f5f5f5;
+    flex-direction: column;
+
+}
+
+.button-container {
+    margin-bottom: 20px;
 }
 
 .flip-container {
     perspective: 1000px;
-
-}
-
-.front {
-    background-image: url(front.jpg);
-    background-size: cover;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-    z-index: 2;
-    transform: rotateY(0deg);
 }
 
 .back {
     background-image: url(back.jpg);
     background-size: cover;
-    background-color: #000;
+    background-color: #ffffff;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-
-    transform: rotateY(180deg);
-}
-
-.flip-container,
-.front,
-.back {
     height: 350px;
     width: 600px;
-}
+    padding: 20px;
 
-.flip-container:hover .flipper {
-    transform: rotateY(180deg);
-    cursor: pointer;
+
+
 }
 
 .flipper {
-    transition: .5s;
     transform-style: preserve-3d;
     position: relative;
 }
 
-.front,
-.back {
-    backface-visibility: hidden;
-    position: absolute;
-}
+
+
+
+
 
 h1,
 p,
@@ -86,8 +72,6 @@ p {
 
 .icon-group {
     margin-top: 8px;
-
-
 }
 
 .back .icons span,
@@ -124,5 +108,4 @@ p {
 
 .icon-box i {
     margin-top: 5px;
-
 }

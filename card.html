@@ -7,14 +7,25 @@
     <title>Your Business Card</title>
     <link rel="stylesheet" href="style1.css">
     <script src="https://kit.fontawesome.com/20cee36f21.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+
 
 </head>
 
 <body>
+
+    <div class="button-container">
+        <button id="downloadBtn">Download Business Card</button>
+    </div>
+
+
     <div class="flip-container">
         <div class="flipper">
-            <div class="front"></div>
-            <div class="back">
+
+            <div class="back" id="htmlContent">
                 <h1>code smart</h1>
                 <p> Wed Designer @ Developer</p>
                 <div class="icons">
@@ -41,16 +52,22 @@
         </div>
     </div>
     <script>
-        // Function to get query parameters
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-        // Set the values from query parameters
-        document.getElementById('displayName').textContent = getQueryParam('name');
-        document.getElementById('displayRole').textContent = getQueryParam('role');
-        document.getElementById('displayCompany').textContent = getQueryParam('company');
+
+        document.getElementById("downloadBtn").addEventListener("click", function () {
+            html2canvas(document.getElementById("htmlContent"), {
+                onrendered: function (canvas) {
+                    var link = document.createElement("a");
+                    link.download = 'business-card.png';
+                    link.href = canvas.toDataURL("image/png");
+                    link.click();
+                }
+            });
+        });
+
     </script>
+
+    <script src="down.js"></script>
+
 </body>
 
 </html>
